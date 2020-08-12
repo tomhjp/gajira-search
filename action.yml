@@ -1,0 +1,15 @@
+name: Jira Search
+description: Find a specific Jira issue
+branding:
+  icon: 'check-square'
+  color: 'blue'
+inputs:
+  jql:
+    description: jql query to select at most 1 issue
+    required: true
+outputs:
+  issue:
+    description: Key of the issue found if any
+runs:
+  using: 'node12'
+  main: './dist/index.js'
